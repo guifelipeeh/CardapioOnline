@@ -606,6 +606,14 @@
                     <label for="customer-address">Endereço:</label>
                     <input type="text" id="customer-address" class="form-control" required>
                 </div>
+                <div>
+                    <label for="customer-pagment">Forma de Pagamento:</label>
+                    <select id="customer-pagment" class="form-control">
+                        <option value="credito">Cartão de Crédito</option>
+                        <option value="debito">Cartão de Díbito</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                </div>
                 <button class="checkout-btn pulse" id="send-order-btn">
                     <i class="fas fa-paper-plane"></i> Enviar Pedido
                 </button>
@@ -777,13 +785,13 @@
                     message += `- ${item.name} (${item.quantity}x) - R$ ${itemTotal.toFixed(2).replace('.', ',')}\n`;
                 });
                 
+                let FormaPagamento = document.getElementById('FormaPagamento').value.trim();
                 message += `\n*Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n`;
                 message += `*Forma de pagamento:*\n`;
-                message += `[ ] Dinheiro\n`;
-                message += `[ ] Cartão de Crédito\n`;
-                message += `[ ] Cartão de Débito\n`;
-                message += `[ ] PIX\n\n`;
-                message += `Observações: `;
+                message += `${FormaPagamento}\n\n`;
+    
+                
+              
                 
                 // Codificar mensagem para URL
                 const encodedMessage = encodeURIComponent(message);
