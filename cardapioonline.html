@@ -506,6 +506,39 @@
                             </div>
                         </div>
                     </div>
+                    <div class="menu-item">
+                        <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="item-info">
+                            <h3 class="item-title">X-Frango</h3>
+                            <p class="item-description">Pão, filé de frango grelhado, queijo, alface, tomate e maionese.</p>
+                            <div class="item-footer">
+                                <span class="item-price">R$ 17,90</span>
+                                <button class="add-to-cart" data-id="4" data-name="X-Frango" data-price="17.90">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="item-info">
+                            <h3 class="item-title">X-Frango</h3>
+                            <p class="item-description">Pão, filé de frango grelhado, queijo, alface, tomate e maionese.</p>
+                            <div class="item-footer">
+                                <span class="item-price">R$ 17,90</span>
+                                <button class="add-to-cart" data-id="4" data-name="X-Frango" data-price="17.90">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image" style="background-image: url('https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="item-info">
+                            <h3 class="item-title">X-Frango</h3>
+                            <p class="item-description">Pão, filé de frango grelhado, queijo, alface, tomate e maionese.</p>
+                            <div class="item-footer">
+                                <span class="item-price">R$ 17,90</span>
+                                <button class="add-to-cart" data-id="4" data-name="X-Frango" data-price="17.90">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -785,7 +818,8 @@
                     message += `- ${item.name} (${item.quantity}x) - R$ ${itemTotal.toFixed(2).replace('.', ',')}\n`;
                 });
                 
-                let FormaPagamento = document.getElementById('FormaPagamento').value.trim();
+                let FormaPagamento = document.getElementById('customer-pagment').value;
+               
                 message += `\n*Total:* R$ ${total.toFixed(2).replace('.', ',')}\n\n`;
                 message += `*Forma de pagamento:*\n`;
                 message += `${FormaPagamento}\n\n`;
